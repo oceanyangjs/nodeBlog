@@ -8,6 +8,10 @@ var express = require('express')
 var swig = require('swig')
 //加载数据库模块
 var mongoose = require('mongoose')
+//加载bodyparser模块，用于处理post提交过来的数据
+var bodyParser = require('body-parser')
+//加载cookies模块
+var Cookies = require('cookies')
 //创建app应用 => http.createserver
 var app = express();
 //定义当前应用所使用的模板引擎
@@ -19,6 +23,32 @@ app.set('views','./views');
 app.set('view engine','html')
 //在开发过程中可以取消模板缓存的限制
 swig.setDefaults({cache:false})
+
+//加载cookies设置
+app.use(function(req,res,next){
+	req.cookies = new Cookies(req,res);
+
+	req.userInfo = {}
+
+
+	//解析用户的登录信息
+	if(req.cookies.get('userInfo')){
+		try{
+			req.userInfo = JSON.parse(req.cookies.get('userInfo'))
+		}catch(e){
+
+		}
+	}
+	console.log(typeof req.cookies.get('userInfo'))
+
+	next();
+})
+
+
+/*
+	bodyparser设置
+*/
+app.use(bodyParser.urlencoded({extented:true}))
 
 /*
 *根据不同功能划分模块
@@ -33,8 +63,8 @@ mongoose.connect('mongodb://localhost:27017/blog',function(err){
 	}else{
 		console.log("数据库连接成功")
 		//监听请求
-		app.listen(8082)
-		console.log('服务启动成功：8082')
+		app.listen(8083)
+		console.log('服务启动成功：8083')
 	}
 });
 
