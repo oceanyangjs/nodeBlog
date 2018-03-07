@@ -79,8 +79,13 @@
 					 {% if userInfo._id %}
 					<div class="rightBox" id="adminBox" >
 						<h3>用户信息</h3>
-						<p class="username">您好，{{userInfo.username}}</p>
-						<p class="userInfo">欢迎登录我的博客~~</p>
+						<p class="username">{{userInfo.username}}</p>
+						 {% if userInfo.isAdmin %}
+						 <p class="userInfo">您好，管理员</p>
+						 <a href="/admin">进入管理首页</a>
+						 {% else %}
+						 <p class="userInfo">欢迎登录我的博客~~</p>
+						 {% endif %}
 						<a class="loginOut" href="javascript:;">退出</a>
 					</div>
 					{% else %}

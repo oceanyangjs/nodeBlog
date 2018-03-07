@@ -123,13 +123,15 @@ router.post('/user/login',function(req,res,next){
 			responseData.message = '登录成功'
 			responseData.userInfo = {
 				username:userInfo.username,
-				_id:userInfo._id
+				_id:userInfo._id,
+				isAdmin:userInfo.isAdmin
 			}
 			console.log('登陆成功')
 			console.log(responseData)
 			req.cookies.set('userInfo',JSON.stringify({
 				username:userInfo.username,
-				_id:userInfo._id
+				_id:userInfo._id,
+				isAdmin:userInfo.isAdmin
 			}));
 			res.json(responseData)
 			return

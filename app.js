@@ -14,6 +14,8 @@ var bodyParser = require('body-parser')
 var Cookies = require('cookies')
 //创建app应用 => http.createserver
 var app = express();
+
+var User = require("./models/User")
 //定义当前应用所使用的模板引擎
 //第一个参数是模板文件的后缀，第二个参数表示用于解析处理模板内容def方法
 app.engine('html',swig.renderFile);
@@ -35,11 +37,15 @@ app.use(function(req,res,next){
 	if(req.cookies.get('userInfo')){
 		try{
 			req.userInfo = JSON.parse(req.cookies.get('userInfo'))
+			//获取当前登录用户的类型，是否是管理员
+			User.findById(req.userInfo._id,function(userInfo){
+				req.userInfo.isAdmin = Boolean(userInfo.isAdmin)
+			})
 		}catch(e){
 
 		}
 	}
-	console.log(typeof req.cookies.get('userInfo'))
+	//console.log(typeof req.cookies.get('userInfo'))
 
 	next();
 })
