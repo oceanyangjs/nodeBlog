@@ -32,13 +32,14 @@ app.use(function(req,res,next){
 
 	req.userInfo = {}
 
-
+	console.log("配置管理员字段信息")
 	//解析用户的登录信息
 	if(req.cookies.get('userInfo')){
 		try{
 			req.userInfo = JSON.parse(req.cookies.get('userInfo'))
 			//获取当前登录用户的类型，是否是管理员
-			User.findById(req.userInfo._id,function(userInfo){
+			User.findById(req.userInfo._id,function(err,userInfo){
+				console.log(userInfo)
 				req.userInfo.isAdmin = Boolean(userInfo.isAdmin)
 			})
 		}catch(e){
