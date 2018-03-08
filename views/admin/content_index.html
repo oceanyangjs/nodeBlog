@@ -1,0 +1,34 @@
+{% extends 'layout.html'%}
+
+{% block main %}
+<ol class="breadcrumb">
+  <li><a href="#">内容管理</a></li>
+  <li><span>内容列表</span></li>
+</ol>
+
+<h3>分类列表</h3>
+
+<table class="table table-hover table-striped">
+	
+	<tr>
+		<th>ID</th>
+		<th>分类名称</th>
+		<th>操作</th>
+	</tr>
+
+	{% for content in contents %}
+	<tr>
+		<td>{{content._id.toString()}}</td>
+		<td>{{content.title}}</td>
+		<td>
+			<a href="/admin/category/edit?id={{ctg._id.toString()}}">修改</a>
+			<a href="/admin/category/delete?id={{ctg._id.toString()}}">删除</a>
+		</td>
+	</tr>
+	{% endfor %}
+
+</table>
+
+{% include 'pageCategory.html' %}
+
+{%  endblock %}

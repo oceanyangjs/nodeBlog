@@ -44,23 +44,9 @@
             		<li class="active"><a href="/" >首页</a></li>
 					
             		
-            		
-            		
-            		<li><a href="/?cid=16">MySql</a></li>
-            		
-            		
-            		
-            		<li><a href="/?cid=17">JQuery</a></li>
-            		
-            		
-            		
-            		<li><a href="/?cid=22">Vue.js</a></li>
-            		
-            		
-            		
-            		<li><a href="/?cid=23">Html/Css</a></li>
-            		
-            		
+            		{% for category in categories%}
+            		<li><a href="/?cid=16">{{category.name}}</a></li>
+            		{%  endfor %}
           		</ul> 
 			</div>
 
@@ -79,7 +65,7 @@
 					 {% if userInfo._id %}
 					<div class="rightBox" id="adminBox" >
 						<h3>用户信息</h3>
-						<p class="username">{{userInfo.username}}</p>
+						<p class="username">{{userInfo.isAdmin}}</p>
 						 {% if userInfo.isAdmin %}
 						 <p class="userInfo">您好，管理员</p>
 						 <a href="/admin">进入管理首页</a>
