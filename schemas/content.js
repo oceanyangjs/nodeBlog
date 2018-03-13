@@ -8,7 +8,7 @@ module.exports = new mongoose.Schema({
 	category:{
 		type:mongoose.Schema.Types.ObjectId,
 		//引用
-		ref:'Content'
+		ref:'Category'
 	},
 	//简介
 	description:{

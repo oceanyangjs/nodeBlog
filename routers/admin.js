@@ -260,8 +260,8 @@ router.get('/content',function(req,res,next){
 		var skip = page - 1;
 
 		//排序 1代表升序 -1代表降序
-		Content.find({}).sort({_id:-1}).limit(limit).skip(skip).exec(function(err,contents){
-		//console.log(users)
+		Content.find({}).sort({_id:-1}).limit(limit).skip(skip).populate('category').exec(function(err,contents){
+		console.log(contents)
 		res.render('admin/content_index',{
 			contents:contents,
 			userInfo:req.userInfo,
@@ -337,6 +337,39 @@ router.post('/content/add',function(req,res,next){
 			url:'/admin/content'
 		})
 	});
+})
+
+// 内容修改
+router.get('/content/edit',function(req,res,next){
+	//获取要修改的信息，并且用表单形式展示出来
+	//var fileId = mongoose.Types.ObjectId();
+	var id = req.query.id || '';
+	//fileId = new ObjectId(id)
+	console.log('分类id' + id)
+
+	Category.find({}).exec(function(err,categories){
+		Content.findOne({
+			_id:id
+		}).populate('category').exec(function(err,content){
+			if (!content) {
+				res.render('admin/error',{
+					message:'指定内容不存在'
+				})
+			}else{
+				res.render('admin/content_edit',{
+					content:content,
+					categories:categories
+				})
+			}
+		})
+	})
+	// Category.findOne({
+	// 	id:ObjectId(id)
+	// }).then(function(category){
+	// 	console.log(category);
+	// 	res.end()
+	// })
+	//res.send('后台管理首页')
 })
 
 module.exports = router;
