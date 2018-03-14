@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+<div class="listBox">
+		<h3>{{content.title}}</h3>
+		<p class="colDefualt">
+			作者：<span class="colInfo">{{content.user.username}}</span>
+			-时间：<span class="colInfo">{{content.addTime|date('Y年m月d日 H:i:s',-8*60)}}</span>
+			-阅读：<span class="colInfo">{{content.views}}</span>
+			-评论：<span id="commentC"  class="colInfo">222</span>
+		</p>
+		
+		<p class="content">{{content.content|safe}}</p>
+		<a href="javascript:history.go(-1);location=document.referrer"><button class="btn btn-primary ">返&nbsp;&nbsp;&nbsp;&nbsp;回</button></a>
+</div>
+
+
+{% endblock %}

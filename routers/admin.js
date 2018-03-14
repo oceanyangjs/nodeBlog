@@ -260,7 +260,7 @@ router.get('/content',function(req,res,next){
 		var skip = page - 1;
 
 		//排序 1代表升序 -1代表降序
-		Content.find({}).sort({_id:-1}).limit(limit).skip(skip).populate('category').exec(function(err,contents){
+		Content.find({}).sort({_id:-1}).limit(limit).skip(skip).populate(['category','user']).exec(function(err,contents){
 		console.log(contents)
 		res.render('admin/content_index',{
 			contents:contents,
@@ -329,7 +329,8 @@ router.post('/content/add',function(req,res,next){
 		title:req.body.title,
 		category:req.body.category,
 		description:req.body.description,
-		content:req.body.content
+		content:req.body.content,
+		user:req.userInfo._id.toString()
 	});
 	contentNew.save(function(err,newContent){
 		res.render('admin/success',{
@@ -369,6 +370,75 @@ router.get('/content/edit',function(req,res,next){
 	// 	console.log(category);
 	// 	res.end()
 	// })
+	//res.send('后台管理首页')
+})
+
+// 内容修改保存
+router.post('/content/edit',function(req,res,next){
+	//获取要修改的信息，并且用表单形式展示出来
+	var id = req.query.id || '';
+	//var name = req.body.name;
+	//fileId = new ObjectId(id)
+	console.log('分类id' + id)
+
+	if(req.body.category == ''){
+		res.render('admin/error',{
+			userInfo:req.userInfo,
+			message:'分类不能为空'
+		})
+		return;
+	}
+	if(req.body.title == ''){
+		res.render('admin/error',{
+			userInfo:req.userInfo,
+			message:'标题不能为空'
+		})
+		return;
+	}
+	if(req.body.description == ''){
+		res.render('admin/error',{
+			userInfo:req.userInfo,
+			message:'简介不能为空'
+		})
+		return;
+	}
+	if(req.body.content == ''){
+		res.render('admin/error',{
+			userInfo:req.userInfo,
+			message:'内容不能为空'
+		})
+		return;
+	}
+	
+
+	Content.update({
+		_id:id
+	},{category:req.body.category,
+		title:req.body.title,
+	description:req.body.description,
+content:req.body.content},function(err,updateRs){
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'修改成功',
+			url:''
+		})
+	})
+
+})
+
+// 内容删除
+router.get('/content/delete',function(req,res,next){
+	//获取要删除的id
+	var id = req.query.id || '';
+	Content.remove({
+		_id:id
+	},function(){
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'删除成功',
+			url:'/admin/content'
+		})
+	})
 	//res.send('后台管理首页')
 })
 
