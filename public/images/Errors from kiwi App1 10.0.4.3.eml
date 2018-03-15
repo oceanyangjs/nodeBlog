@@ -1,0 +1,29 @@
+X-QQ-mid: bizesmtp8t1521104401thfhx4csn
+Received: from localhost (unknown [111.230.166.253])
+	by esmtp4.qq.com (ESMTP) with 
+	id ; Thu, 15 Mar 2018 17:00:01 +0800 (CST)
+X-QQ-SSF: 00200000004000202xF0000A0000001
+X-QQ-FEAT: uuX/0Mknq+p5bk8GoLf5h9SknT3KyVtZ884VrJKohRkMNU0FObZDrLCVDIDMp
+	BBaxSUt+RdmC8JFzk9rr2ETbLuv53CjLyuMccPmJC8bRuyBd4lqAWRipoUrhEln+gLDMlWu
+	sB507iqnF1lgtlO5SK+sCtNnCbN9VuqyNA7LigLqUCyipcpa0navSXwrA0AELRiPW2OCOKW
+	K8IwcJkZHeiX0+V1mzKMUuEbHcOdED337Yc2f9dK0txR68ASLhydUI2tgo/AEG9exGavab0
+	drl6RPK6h/xGjRyWGr8Fw+Ids=
+Date: Thu, 15 Mar 2018 17:00:01 +0800
+From: server@fanyoy.com
+To: yulong.rong@fanyoy.com, chao.guo@fanyoy.com
+Subject: Errors from kiwi App1 10.0.4.3
+Message-ID: <5aaa3611.JZztePF7rkA6fzTP%server@fanyoy.com>+318496C74270C093
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+++++++++++++++++++++kiwi_server5.log+++++++++++++++++++
+2018-03-15 16:03:52,845 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(50) 
+ERROR: player:5000017051 message【_equipDown:playerhero_id(1160008) pos(2) playerequip(0) is not existed】2018-03-15 16:03:52.845477
+2018-03-15 16:04:02,155 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016143 message【taskReward:taskGid(3100305) is not done】2018-03-15 16:04:02.155081
+2018-03-15 16:04:10,798 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016143 message【taskReward:taskGid(3100305) is not done】2018-03-15 16:04:10.798861
+2018-03-15 16:16:34,806 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016889 message【friendBuildingUpgrade: player(5000016889) friendBuilding(1001001) is not upgrading or shorten time < 1】2018-03-15 16:16:34.806236
+2018-03-15 16:16:42,243 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016889 message【friendBuildingHarvest: player(5000016889) friend(5000016584) has no harvest】2018-03-15 16:16:42.243264
+2018-03-15 16:30:15,310 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000017082 message【activateInvitationCode: player(5000017082) send a wrong invitation code(J8K8Y43UZ8)】2018-03-15 16:30:15.310412
+2018-03-15 16:40:01,790 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000017032 message【siegeBattleTaskReward:taskId(1) had received】2018-03-15 16:40:01.790146

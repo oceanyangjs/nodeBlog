@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var User = require('../models/User')
+var Content = require('../models/Content')
 
 //统一返回格式
 var responseData;
@@ -144,8 +145,32 @@ router.get('/user/logout',function(req,res,next){
 	res.json(responseData);
 })
 
+//获取文章的所有评论
 router.get('/comment',function(req,res,next){
-	res.send('api - User');
+	//res.send('api - User');
+	//内容id
+	var contentId = req.query.contentid;
+	//查询当前文章
+	Content.findOne({
+		_id:contentId
+	},function(err,content){
+		responseData.data = content;
+		res.json(responseData)
+	})
+})
+
+//提交评论
+router.post('/comment/post',function(req,res,next){
+	//res.send('api - User');
+	//内容id
+	var contentId = req.body.contentid;
+	//查询当前文章
+	Content.findOne({
+		_id:contentId
+	},function(err,content){
+		responseData.data = content;
+		res.json(responseData)
+	})
 })
 
 module.exports = router;

@@ -14,10 +14,11 @@ $('#messageBtn').on('click',function(){
 		dataType:'json',
 		success:function(result){
 			$('#commitTextarea').val('');
+			comments= result.data.comments.reverse();
 			renderComment();
-			if(!result.code){
-				window.location.reload();
-			}
+			// if(!result.code){
+			// 	window.location.reload();
+			// }
 		},
 		error:function(err){
 		}
@@ -31,58 +32,59 @@ $.ajax({
 		contentid:$('#contentId').val()
 	},
 	success:function(result){
-		comments= result;
+		comments= result.data.comments.reverse();
 		renderComment();
 	}
 })
 
 //事件委托，上一页，下一页点击
-$('#pager').delegate('a','click',function(){
-	if($(this).parent().hasClass('previous')){
-		if(page>1){
-			page--;
-		}
-	}else{
-		if(page<pages){
-			page++;
-		}
-	}
-	renderComment();
-})	
+// $('#pager').delegate('a','click',function(){
+// 	if($(this).parent().hasClass('previous')){
+// 		if(page>1){
+// 			page--;
+// 		}
+// 	}else{
+// 		if(page<pages){
+// 			page++;
+// 		}
+// 	}
+// 	renderComment();
+// })	
 
 //渲染评论页面
 function renderComment() {
 
-	//分页实现
-	pages=Math.max(Math.ceil(comments.length/perpage),1);
-	var start=Math.max(0,(page-1)*perpage);
-	var end =Math.min(start+perpage,comments.length);
+	// //分页实现
+	// pages=Math.max(Math.ceil(comments.length/perpage),1);
+	// var start=Math.max(0,(page-1)*perpage);
+	// var end =Math.min(start+perpage,comments.length);
 
-	$lis= $('#pager li');
-	$lis.eq(1).html( page + ' / ' + pages );
+	// $lis= $('#pager li');
+	// $lis.eq(1).html( page + ' / ' + pages );
 
 
-	//评论数
-	$('#messageCount').html(comments.length);
-	$('#commentC').html(comments.length);
+	// //评论数
+	// $('#messageCount').html(comments.length);
+	// $('#commentC').html(comments.length);
 
-	//判断是否有评论
-	if (comments.length  == 0 ) {
-		$('#noComments').html('<div >还没有留言!</div>');
-		$('#pager').hide();
-		$('#messageList').hide();
-	}else{
-		$('#pager').show();
-		$('#messageList').show();
-		$('#noComments').html('');
+	// //判断是否有评论
+	// if (comments.length  == 0 ) {
+	// 	$('#noComments').html('<div >还没有留言!</div>');
+	// 	$('#pager').hide();
+	// 	$('#messageList').hide();
+	// }else{
+	// 	$('#pager').show();
+	// 	$('#messageList').show();
+	// 	$('#noComments').html('');
 
 		//评论
 		var html = '';
-		for(var i =start;i<end;i++){
-			html +=('<div class="messageBox" ><p class="name clear"><span class="fl">'+comments[i].username+'</span><span class="fl fr">'+formatDate(comments[i].addDate)+'</span></p><p>'+comments[i].content+'</p></div>');
+		// for(var i =start;i<end;i++){
+		 for(var i =0;i<comments.length;i++){
+			html +=('<div class="messageBox" ><p class="name clear"><span class="fl">'+comments[i].username+'</span><span class="fl fr">'+formatDate(comments[i].postTime)+'</span></p><p>'+comments[i].content+'</p></div>');
 		}
 		$('#messageList').html(html);
-	};
+	// };
 }
 
 //格式化显示日期

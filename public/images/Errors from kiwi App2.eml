@@ -1,0 +1,102 @@
+X-QQ-mid: bizesmtp8t1521104401tnu6w1ruq
+Received: from VM_4_10_centos (unknown [118.126.104.142])
+	by esmtp4.qq.com (ESMTP) with 
+	id ; Thu, 15 Mar 2018 17:00:01 +0800 (CST)
+X-QQ-SSF: 01200000004000202xF1000A0000001
+X-QQ-FEAT: 6dXuswn9i1WO9yJEaxPl+F0rYuUS4RtA6va6BSs94yguO2pAT86DCS03sMRhz
+	WIVceBmF8SCE0Uqb0yMhHSV1m77zpZDh//T1hZHyJ1EvoU58RYEtyXxpLYgfMwXv3PxlUaO
+	zc375GnD5jkfG7xZMexEabJ7WOwgmZkItQULyxiHHB+3B/b/NzdlcnMIaZyz/jdhixsDgAz
+	qdlkLAzVM1qj0p2AYo8oibn40RuoT8osor5gW1K0UT1WldX5fCoK1dkJ5y1wtUGwWpKRKzJ
+	8SGEy/+ktOhRCYSOPa9BzOKYM=
+Date: Thu, 15 Mar 2018 17:00:01 +0800
+From: server@fanyoy.com
+To: yulong.rong@fanyoy.com, chao.guo@fanyoy.com
+Subject: Errors from kiwi App2 
+Message-ID: <5aaa3611.aYjXGFIn1NOSHSMG%server@fanyoy.com>+3FF5E3D5A0110F41
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+++++++++++++++++++++kiwi_server1.log+++++++++++++++++++
+2018-03-15 16:03:59,796 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:07:51,507 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:16:27,068 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:22:24,990 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:27:02,519 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:34:44,690 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:35:38,619 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:36:10,608 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:37:36,494 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+2018-03-15 16:48:40,626 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py(149) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/pymongo/topology.py:149: UserWarning: MongoClient opened before fork. Create MongoClient only after forking. See PyMongo's documentation for details: http://api.mongodb.org/python/current/faq.html#is-pymongo-fork-safe
+  "MongoClient opened before fork. Create MongoClient only "
+
+++++++++++++++++++++kiwi_server2.log+++++++++++++++++++
+2018-03-15 16:10:41,244 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000009009 message【friendAddRequest: player(2000009009) The number of target player(2000009975) friends has reached the maximum】2018-03-15 16:10:41.244501
+2018-03-15 16:18:36,688 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000009522 message【friendAddRequest: player(2000009522) The number of target player(2000007207) friends has reached the maximum】2018-03-15 16:18:36.688388
+2018-03-15 16:31:51,243 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000007695 message【getGuildGoodsExchange: exchangeGoodsId 2622102 is none】2018-03-15 16:31:51.243514
+2018-03-15 16:32:56,914 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:32:56.914175
+2018-03-15 16:33:00,478 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:33:00.478326
+2018-03-15 16:33:02,973 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:33:02.973072
+2018-03-15 16:33:03,972 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:33:03.972201
+2018-03-15 16:33:04,890 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:33:04.890967
+2018-03-15 16:33:06,202 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000004394) has no harvest】2018-03-15 16:33:06.202181
+2018-03-15 16:33:24,159 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000009612) has no harvest】2018-03-15 16:33:24.159288
+2018-03-15 16:33:27,332 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000009612) has no harvest】2018-03-15 16:33:27.332416
+2018-03-15 16:33:29,399 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000009612) has been helped】2018-03-15 16:33:29.399477
+2018-03-15 16:33:30,289 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000008073 message【friendBuildingHarvest: player(2000008073) friend(3000009612) has been helped】2018-03-15 16:33:30.289616
+2018-03-15 16:35:51,578 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:2000000771 message【_artifactUp:playerhero_id(1140007) level(32) artifact wearLevel(35) can not weared】2018-03-15 16:35:51.578182
+++++++++++++++++++++kiwi_server3.log+++++++++++++++++++
+2018-03-15 16:02:28,648 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:3000011582 message【guildSiegeBattleChallenge:target_player in same guild. target_player_id:3000013357】2018-03-15 16:02:28.648280
+2018-03-15 16:02:50,330 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:3000013307 message【buildingWallWarriorUpgrade:player(3000013307) has not enough gold】2018-03-15 16:02:50.330200
+2018-03-15 16:24:43,144 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(50) 
+ERROR: player:3000014182 message【itemCompose:player itemfragment(2621503) not existed】2018-03-15 16:24:43.144667
+2018-03-15 16:53:14,765 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:3000007634 message【guildSiegeBattleChallenge:target_player can`t fight. target_player_id:3000011582】2018-03-15 16:53:14.765960
+++++++++++++++++++++kiwi_server4.log+++++++++++++++++++
+2018-03-15 16:02:48,105 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016665 message【_artifactUp:playerhero_id(1140003) level(33) artifact wearLevel(35) can not weared】2018-03-15 16:02:48.105961
+2018-03-15 16:03:06,337 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【friendBuildingHarvest: player(4000016572) friend(4000016547) has no harvest】2018-03-15 16:03:06.337942
+2018-03-15 16:03:07,357 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【friendBuildingHarvest: player(4000016572) friend(4000016547) has no harvest】2018-03-15 16:03:07.357857
+2018-03-15 16:03:16,863 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【friendBuildingHarvest: player(4000016572) friend(4000016547) has no harvest】2018-03-15 16:03:16.863574
+2018-03-15 16:03:52,339 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【friendBuildingHarvest: player(4000014876) friend(4000014886) has no harvest】2018-03-15 16:03:52.339099
+2018-03-15 16:03:53,019 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016665 message【friendBuildingUpgrade: player(4000016665) friend(4000015624) has been helped】2018-03-15 16:03:53.019044
+2018-03-15 16:03:53,716 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【friendBuildingHarvest: player(4000014876) friend(4000014886) has no harvest】2018-03-15 16:03:53.716246
+2018-03-15 16:03:59,335 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【friendBuildingHarvest: player(4000016572) friend(4000016547) has no harvest】2018-03-15 16:03:59.335559
+2018-03-15 16:04:00,181 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【friendBuildingHarvest: player(4000014876) friend(4000014886) has no harvest】2018-03-15 16:04:00.181184
+2018-03-15 16:04:33,917 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【friendBuildingHarvest: player(4000016572) friend(4000016547) has no harvest】2018-03-15 16:04:33.917088
+2018-03-15 16:07:56,753 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【guildSiegeBattleChallenge:player has no guild. target_player_id:4000015090】2018-03-15 16:07:56.753321
+2018-03-15 16:07:59,778 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【guildSiegeBattleChallenge:player has no guild. target_player_id:4000015090】2018-03-15 16:07:59.778398
+2018-03-15 16:08:19,217 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【guildSiegeBattleChallenge:target_player in same guild. target_player_id:4000010530】2018-03-15 16:08:19.217540
+2018-03-15 16:10:00,107 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000016572 message【getGuildGoodsExchange: exchangeGoodsId 2622003 is none】2018-03-15 16:10:00.107508
+2018-03-15 16:21:00,423 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【friendAddRequest: player(4000014876) The number of target player(4000015121) friends has reached the maximum】2018-03-15 16:21:00.422969
+2018-03-15 16:21:04,693 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014876 message【friendAddRequest: player(4000014876) The number of target player(4000006613) friends has reached the maximum】2018-03-15 16:21:04.693217
+2018-03-15 16:30:17,813 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000014895 message【guildSiegeBattleChallenge:target_player in same guild. target_player_id:4000004841】2018-03-15 16:30:17.813755
+2018-03-15 16:41:25,335 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:4000013356 message【friendAddRequest: player(4000013356) The number of target player(4000006613) friends has reached the maximum】2018-03-15 16:41:25.335788
+++++++++++++++++++++kiwi_server5.log+++++++++++++++++++
+2018-03-15 16:03:04,898 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000017082 message【activateInvitationCode: player(5000017082) send a wrong invitation code(ALAAFWZK7P)】2018-03-15 16:03:04.898859
+2018-03-15 16:04:04,044 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016143 message【taskReward:taskGid(3100305) is not done】2018-03-15 16:04:04.044008
+2018-03-15 16:04:09,711 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016143 message【taskReward:taskGid(3100305) is not done】2018-03-15 16:04:09.710995
+2018-03-15 16:16:42,941 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016889 message【friendBuildingHarvest: player(5000016889) friend(5000016584) has no harvest】2018-03-15 16:16:42.941426
+2018-03-15 16:16:44,037 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016889 message【friendBuildingHarvest: player(5000016889) friend(5000016584) has no harvest】2018-03-15 16:16:44.037582
+2018-03-15 16:28:46,913 WARNING  /opt/virtualenvs/kiwi/lib/python2.7/site-packages/MySQLdb/cursors.py(117) /opt/virtualenvs/kiwi/lib/python2.7/site-packages/django/db/backends/mysql/base.py:124: Warning: Out of range value for column 'use_playerid' at row 1
+  return self.cursor.execute(query, args)
+
+2018-03-15 16:31:19,186 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016941 message【buildingCheck:building(1001012) harvest playerbuilding(379016) status(0) is not normal】2018-03-15 16:31:19.186190
+2018-03-15 16:33:24,886 ERROR    /data/webapps/kiwi/current/application/module/common/middleware.py(43) \WARRING: player:5000016878 message【_artifactUp:playerhero_id(1140003) level(25) artifact wearLevel(35) can not weared】2018-03-15 16:33:24.886490
