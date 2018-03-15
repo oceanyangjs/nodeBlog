@@ -164,12 +164,21 @@ router.post('/comment/post',function(req,res,next){
 	//res.send('api - User');
 	//内容id
 	var contentId = req.body.contentid;
+	var postData = {
+		username:req.userInfo.username,
+		postTime:new Date(),
+		content:req.body.comment
+	}
 	//查询当前文章
 	Content.findOne({
 		_id:contentId
 	},function(err,content){
-		responseData.data = content;
-		res.json(responseData)
+		content.comments.push(postData);
+		content.save(function(err,newContent){
+			responseData.message = '评论成功';
+			responseData.data = newContent;
+			res.json(responseData)
+		});
 	})
 })
 

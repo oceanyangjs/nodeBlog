@@ -55,17 +55,17 @@ $.ajax({
 function renderComment() {
 
 	// //分页实现
-	// pages=Math.max(Math.ceil(comments.length/perpage),1);
-	// var start=Math.max(0,(page-1)*perpage);
-	// var end =Math.min(start+perpage,comments.length);
+	pages=Math.max(Math.ceil(comments.length/perpage),1);
+	var start=Math.max(0,(page-1)*perpage);
+	var end =Math.min(start+perpage,comments.length);
 
-	// $lis= $('#pager li');
-	// $lis.eq(1).html( page + ' / ' + pages );
+	$lis= $('#pager li');
+	$lis.eq(1).html( page + ' / ' + pages );
 
 
 	// //评论数
-	// $('#messageCount').html(comments.length);
-	// $('#commentC').html(comments.length);
+	$('#messageCount').html(comments.length);
+	$('#commentC').html(comments.length);
 
 	// //判断是否有评论
 	// if (comments.length  == 0 ) {
