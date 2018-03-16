@@ -38,18 +38,18 @@ $.ajax({
 })
 
 //事件委托，上一页，下一页点击
-// $('#pager').delegate('a','click',function(){
-// 	if($(this).parent().hasClass('previous')){
-// 		if(page>1){
-// 			page--;
-// 		}
-// 	}else{
-// 		if(page<pages){
-// 			page++;
-// 		}
-// 	}
-// 	renderComment();
-// })	
+$('#pager').delegate('a','click',function(){
+	if($(this).parent().hasClass('previous')){
+		if(page>1){
+			page--;
+		}
+	}else{
+		if(page<pages){
+			page++;
+		}
+	}
+	renderComment();
+})	
 
 //渲染评论页面
 function renderComment() {
@@ -62,29 +62,45 @@ function renderComment() {
 	$lis= $('#pager li');
 	$lis.eq(1).html( page + ' / ' + pages );
 
+	if(page <= 1){
+		page = 1;
+		$lis.eq(0).html('<span>没有上一页了</span>');
+	}else{
+		$lis.eq(0).html('<a href="javascript:;"><i class="material-icons">上一页</i></a>');
+	}
+	if(page >= pages){
+		page = pages;
+		$lis.eq(2).html('<span>没有下一页了</span>');
+	}else{
+		$lis.eq(2).html('<a href="javascript:;"><i class="material-icons">下一页</i></a>');
+	}
+	// else{
+	// 	$lis.eq(2).html('<span>下一页</span>');
+	// }
+
 
 	// //评论数
 	$('#messageCount').html(comments.length);
 	$('#commentC').html(comments.length);
 
-	// //判断是否有评论
-	// if (comments.length  == 0 ) {
-	// 	$('#noComments').html('<div >还没有留言!</div>');
-	// 	$('#pager').hide();
-	// 	$('#messageList').hide();
-	// }else{
-	// 	$('#pager').show();
-	// 	$('#messageList').show();
-	// 	$('#noComments').html('');
+	//判断是否有评论
+	if (comments.length  == 0 ) {
+		$('#noComments').html('<div >还没有留言!</div>');
+		$('#pager').hide();
+		$('#messageList').hide();
+	}else{
+		$('#pager').show();
+		$('#messageList').show();
+		$('#noComments').html('');
 
 		//评论
 		var html = '';
-		// for(var i =start;i<end;i++){
-		 for(var i =0;i<comments.length;i++){
+		for(var i =start;i<end;i++){
+		//for(var i =0;i<comments.length;i++){
 			html +=('<div class="messageBox" ><p class="name clear"><span class="fl">'+comments[i].username+'</span><span class="fl fr">'+formatDate(comments[i].postTime)+'</span></p><p>'+comments[i].content+'</p></div>');
 		}
 		$('#messageList').html(html);
-	// };
+	};
 }
 
 //格式化显示日期
@@ -113,7 +129,4 @@ function formatDate(d){
 	}
 	return year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;
 }
-
-
-
 
